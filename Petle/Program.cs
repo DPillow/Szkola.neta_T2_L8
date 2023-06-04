@@ -35,6 +35,10 @@ namespace Petle
             //    }
             //}
 
+            //Console.WriteLine("");
+            //Console.WriteLine(".....................................................");
+            //Console.WriteLine("");
+
             ////2. Parzystość;
             //int i = 0;
             //while (i <= 100)
@@ -49,6 +53,10 @@ namespace Petle
             //    }
             //    i++;
             //}
+
+            //Console.WriteLine("");
+            //Console.WriteLine(".....................................................");
+            //Console.WriteLine("");
 
             ////3. Fibonacci;
             //int F1 = 0;
@@ -74,6 +82,10 @@ namespace Petle
             //    }
             //}
 
+            //Console.WriteLine("");
+            //Console.WriteLine(".....................................................");
+            //Console.WriteLine("");
+
             ////4. Liczby;
             //Console.WriteLine("Podaj liczbę: ");
             //Int32.TryParse(Console.ReadLine(), out int yourNumber);
@@ -93,6 +105,10 @@ namespace Petle
             //        break;
             //}
 
+            //Console.WriteLine("");
+            //Console.WriteLine(".....................................................");
+            //Console.WriteLine("");
+
             ////5. 3 potega;
             //int i = 1;
             //for (i = 1; i <= 20; i++)
@@ -100,6 +116,10 @@ namespace Petle
             //    int cubei = i * i * i;
             //    Console.WriteLine(cubei);
             //}
+
+            //Console.WriteLine("");
+            //Console.WriteLine(".....................................................");
+            //Console.WriteLine("");
 
             ////6. Sumy
             //for (int i = 0; i <= 20; i++)
@@ -122,8 +142,100 @@ namespace Petle
             //    }
             //}
 
-            ////7. Diament
+            //Console.WriteLine("");
+            //Console.WriteLine(".....................................................");
+            //Console.WriteLine("");
 
+            ////7. Diament
+            //Console.WriteLine("Podaj długość przekątnej: ");
+            //Int32.TryParse(Console.ReadLine(), out int numberDiamond);
+            //for (int i = 0; i < numberDiamond; i++)
+            //{
+            //    int blanks = Math.Abs(numberDiamond / 2 - i); //puste miejsca
+            //    int textDiamond = numberDiamond - blanks * 2; //ilosc gwiazdek
+            //    int n = 0;
+            //    int m = 0;
+
+
+            //    while (n < blanks)
+            //    {
+            //        if (textDiamond != 0)   //Sprawdzenie żeby nie było brzydkiej linii w parzystych
+            //            Console.Write(" ");
+            //            n++;
+
+            //    }
+            //    while (m < textDiamond)
+            //    {
+            //        Console.Write("x");
+            //        m++;
+
+            //    }
+            //    if (textDiamond != 0)   //Sprawdzenie żeby nie było brzydkiej linii w parzystych
+            //        Console.WriteLine(); 
+            //}
+
+            //Console.WriteLine("");
+            //Console.WriteLine(".....................................................");
+            //Console.WriteLine("");
+
+            ////8. Odwracanie
+            //Console.Write("Wpisz string: ");
+            //string wartoscOdwracana = Console.ReadLine();
+            //string lowercase = wartoscOdwracana.ToLower();
+            //char[] arr = lowercase.ToCharArray();
+            //Array.Reverse(arr);
+            //arr[0] = char.ToUpper(arr[0]);
+            //Console.WriteLine(arr);
+
+            //Console.WriteLine("");
+            //Console.WriteLine(".....................................................");
+            //Console.WriteLine("");
+
+            ////9. Binarna
+            //Console.Write("Wpisz numer do konwersji:");
+            //Int32.TryParse(Console.ReadLine(), out int num);
+            //int rest;
+            //string binary = string.Empty;
+            //while (num>0)
+            //{
+            //    rest = num % 2;
+            //    num = num / 2;
+            //    binary = rest.ToString() + binary;
+            //}
+            //Console.WriteLine(binary);
+
+            //Console.WriteLine("");
+            //Console.WriteLine(".....................................................");
+            //Console.WriteLine("");
+
+            ////10. Wielokrotność
+            int baseNum1 = 30;
+            int baseNum2 = 250;
+            int num1 = baseNum1;
+            int num2 = baseNum2;
+            int divider = 0;
+            int rest = 0;
+            do
+            {
+                if (num1 > num2)
+                {
+                    num2 = num2 + baseNum2;
+                    divider = num1 / num2;
+                    rest = num1 % num2;
+                }
+                else if (num1 < num2)
+                {
+                    num1 = num1 + baseNum1;
+                    divider = num1 / num2;
+                    rest = num1 % num2;
+                }
+                else
+                {
+                    break;
+                }   
+            }
+            while (divider != 1 || rest != 0);
+            Console.WriteLine($"NNW({baseNum1},{baseNum2}) = {num2}");
         }
     }
 }
