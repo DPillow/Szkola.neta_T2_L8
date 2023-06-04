@@ -6,7 +6,7 @@ namespace Petle
     {
         static void Main(string[] args)
         {
-            //1. Liczby pierwsze;
+            Console.WriteLine("1. Liczby pierwsze");
             int sprawdzam = 0;//zmienna służąca do sprawdzenia czy pojawił się dzielnik
             for (int i = 0; i <= 100; i++)
             {
@@ -39,7 +39,7 @@ namespace Petle
             Console.WriteLine(".....................................................");
             Console.WriteLine("");
 
-            //2. Parzystość;
+            Console.WriteLine("2. Parzystość");
             int v = 0;
             while (v <= 100)
             {
@@ -58,10 +58,10 @@ namespace Petle
             Console.WriteLine(".....................................................");
             Console.WriteLine("");
 
-            //3. Fibonacci;
-            int F1 = 0;
-            int F2 = 0;
-            int F3 = 0;
+            Console.WriteLine("3.Fibonacci");
+            ulong F1 = 0;
+            ulong F2 = 0;
+            ulong F3 = 0;
             for (int u = 0; u <= 100; u++)
             {
                 if (u == 0)
@@ -86,7 +86,7 @@ namespace Petle
             Console.WriteLine(".....................................................");
             Console.WriteLine("");
 
-            //4. Liczby;
+            Console.WriteLine("4. Liczby");
             Console.WriteLine("Podaj liczbę: ");
             Int32.TryParse(Console.ReadLine(), out int yourNumber);
             int b = 1;
@@ -109,7 +109,7 @@ namespace Petle
             Console.WriteLine(".....................................................");
             Console.WriteLine("");
 
-            //5. 3 potega;
+            Console.WriteLine("5. 3 potega");
             int o = 1;
             for (o = 1; o <= 20; o++)
             {
@@ -121,7 +121,7 @@ namespace Petle
             Console.WriteLine(".....................................................");
             Console.WriteLine("");
 
-            //6. Sumy
+            Console.WriteLine("6. Sumy");
             for (int i = 0; i <= 20; i++)
             {
                 if (i == 0)
@@ -146,7 +146,7 @@ namespace Petle
             Console.WriteLine(".....................................................");
             Console.WriteLine("");
 
-            //7. Diament
+            Console.WriteLine("7. Diament");
             Console.WriteLine("Podaj długość przekątnej: ");
             Int32.TryParse(Console.ReadLine(), out int numberDiamond);
             for (int i = 0; i < numberDiamond; i++)
@@ -178,20 +178,20 @@ namespace Petle
             Console.WriteLine(".....................................................");
             Console.WriteLine("");
 
-            //8. Odwracanie
+            Console.WriteLine("8. Odwracanie");
             Console.Write("Wpisz string: ");
             string wartoscOdwracana = Console.ReadLine();
-            string lowercase = wartoscOdwracana.ToLower();
-            char[] arr = lowercase.ToCharArray();
-            Array.Reverse(arr);
-            arr[0] = char.ToUpper(arr[0]);
+            string lowercase = wartoscOdwracana.ToLower(); //wszystko zamieniamy na lowercase
+            char[] arr = lowercase.ToCharArray(); //String do array
+            Array.Reverse(arr); //odwracamy string
+            arr[0] = char.ToUpper(arr[0]); //Wielka litera na początku
             Console.WriteLine(arr);
 
             Console.WriteLine("");
             Console.WriteLine(".....................................................");
             Console.WriteLine("");
 
-            //9. Binarna
+            Console.WriteLine("9. Binarna");
             Console.Write("Wpisz numer do konwersji:");
             Int32.TryParse(Console.ReadLine(), out int num);
             int rest;
@@ -208,13 +208,13 @@ namespace Petle
             Console.WriteLine(".....................................................");
             Console.WriteLine("");
 
-            //10. Wielokrotność
+            Console.WriteLine("10. Wielokrotność");
             int baseNum1 = 30;
             int baseNum2 = 250;
             int num1 = baseNum1;
             int num2 = baseNum2;
-            int divider = 0;
-            int rest2 = 0;
+            int divider;
+            int rest2;
             do
             {
                 if (num1 > num2)
@@ -231,10 +231,10 @@ namespace Petle
                 }
                 else
                 {
-                    break;
+                    break; //Jeżeli liczby są równe
                 }   
             }
-            while (divider != 1 || rest2 != 0);
+            while (divider != 1 || rest2 != 0); //Pętla się powtarza do reszty równej 0 i wyniku równego 1
             Console.WriteLine($"NNW({baseNum1},{baseNum2}) = {num2}");
         }
     }
