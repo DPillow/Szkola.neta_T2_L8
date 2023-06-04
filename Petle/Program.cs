@@ -7,7 +7,7 @@ namespace Petle
         static void Main(string[] args)
         {
             Console.WriteLine("1. Liczby pierwsze");
-            int sprawdzam = 0;//zmienna służąca do sprawdzenia czy pojawił się dzielnik
+            int check = 0;//zmienna służąca do sprawdzenia czy pojawił się dzielnik
             for (int i = 0; i <= 100; i++)
             {
                 if (i == 0 || i == 1)
@@ -20,10 +20,10 @@ namespace Petle
                     {
                         if (i % d == 0)
                         {
-                            sprawdzam++;//jeżeli dzieli się przez 2 lub więcej leci++
+                            check++;//jeżeli dzieli się przez 2 lub więcej leci++
                         }
                     }
-                    if (sprawdzam > 0) //jeżeli miał dzielnik inny niż 1 i swój to jest speniony warunek
+                    if (check > 0) //jeżeli miał dzielnik inny niż 1 i swój to jest speniony warunek
                     {
                         Console.WriteLine($"{i} nie jest liczbą pierwszą");
                     }
@@ -31,7 +31,7 @@ namespace Petle
                     {
                         Console.WriteLine($"{i} jest liczbą pierwszą");
                     }
-                    sprawdzam = 0; //Reset zmiennej do śledzenia
+                    check = 0; //Reset zmiennej do śledzenia
                 }
             }
 
@@ -180,8 +180,8 @@ namespace Petle
 
             Console.WriteLine("8. Odwracanie");
             Console.Write("Wpisz string: ");
-            string wartoscOdwracana = Console.ReadLine();
-            string lowercase = wartoscOdwracana.ToLower(); //wszystko zamieniamy na lowercase
+            string valueToReverse = Console.ReadLine();
+            string lowercase = valueToReverse.ToLower(); //wszystko zamieniamy na lowercase
             char[] arr = lowercase.ToCharArray(); //String do array
             Array.Reverse(arr); //odwracamy string
             arr[0] = char.ToUpper(arr[0]); //Wielka litera na początku
