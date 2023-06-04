@@ -89,19 +89,21 @@ namespace Petle
             Console.WriteLine("4. Liczby");
             Console.WriteLine("Podaj liczbę: ");
             Int32.TryParse(Console.ReadLine(), out int yourNumber);
-            int b = 1;
+            int a = 1;
             for (int i = 0; i < yourNumber; i++)
             {
-                for (int j = 0; j < i + 1; j++)
+                int j = 0;
+                while(j < i + 1)
                 {
-                    if (b > yourNumber)
+                    if (a > yourNumber)
                         break;
 
-                    Console.Write($"{b} ");
-                    b++;
+                    Console.Write($"{a} ");
+                    a++;
+                    j++;
                 }
                 Console.WriteLine();
-                if (b > yourNumber)
+                if (a > yourNumber)
                     break;
             }
 
